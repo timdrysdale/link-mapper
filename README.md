@@ -57,6 +57,7 @@ Note: do not edit the home page entry. It does not need the parent field, and is
 
 ## Formatting
 
+Line styles and page boxes can be styled - if the map becomes unruly, or needs colouring etc, then consider adding attributes to the page definitions that link to specific colour maps etc.
 
 
 
