@@ -6,12 +6,12 @@ Map hierarchy and links between web pages as specified in a yaml file
 
 ## Prerequisites
 
-This script expects Python3 with `pyyaml` and `graphviz` installed. The script was developed with Anaconda python3 on Ubuntu linux.
+This script expects Python v3 with `pyyaml` and `graphviz` installed. The script was developed with Anaconda python3 on Ubuntu linux.
 
 To install the dependencies on linux
 ```
 pip3 install pyyaml
-pip2 install graphviz
+pip3 install graphviz
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ pip2 install graphviz
 Edit the `definition.yaml` file to represent the pages
 
 Check the file is formatted ok with `yamllint`:
-````
+```
 yamllint definition.yaml
 
 ```
