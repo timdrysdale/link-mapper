@@ -9,8 +9,8 @@ Tim Drysdale 28 Feb 2024 Created
 import graphviz
 import yaml
 
-with open('example.yaml', 'r') as file:
-    definition = yaml.safe_load(file)
+with open('definition.yaml', 'r') as file:
+    definition = yaml.safe_load(file) #leave open that we define other aspects in the file 
 
 pages = definition["pages"]
 
@@ -44,7 +44,7 @@ for page in pages:
             if not parent in names:
                 print("warning: " + name + " has parent " + parent + " but it is missing")
             
-            dot.edge(name, parent, color="blue")
+            dot.edge(name, parent, color="black", arrowhead='none')
         else:
             if not name == "home":
                 print("warning: " + name + " does not have a parent")
@@ -56,7 +56,7 @@ for page in pages:
         if "links" in page: #ignore parent link if not included 
             for link in page["links"]:
                 link = link.lower() #avoid forcing users to be strict on capitalisation
-                dot.edge(name, link, color="red", constraint="false")
+                dot.edge(name, link, color="blue", style="dashed", constraint="false")
         else:
             if not name == "home":
                 print("warning: " + name + " does not have a parent")
