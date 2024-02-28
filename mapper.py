@@ -63,4 +63,5 @@ for page in pages:
             
 
 #
-dot.render(directory='doctest-output', view=True)  
+dot.render(directory='output', view=True)  
+dot.render(directory='output', view=False, format="png") #for README 
