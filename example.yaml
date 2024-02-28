@@ -1,0 +1,45 @@
+---
+
+pages:
+  - name: home
+    label: Home
+
+  - name: study
+    parent: home
+    links:
+      - careers
+      - student_experience
+
+  - name: careers
+    parent: home
+    links:
+      - study
+      - student_experience
+
+  - name: student_experience
+    parent: home
+    links:
+      - careers
+      - study
+
+  - name: placements
+    label: Industrial Placements
+    parent: Careers
+    links:
+      - student_experience
+
+  - name: societies
+    parent: student_experience
+    links:
+      - placements
+      - formula_student
+
+  - name: formula_student
+    parent: societies
+    links:
+      - hyperloop
+
+  - name: hyperloop
+    parent: societies
+    links:
+      - formula_student
